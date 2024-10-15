@@ -28,21 +28,21 @@ int main(int argc, char* argv[]) {
     int b = atoi(argv[2]);
     int c = atoi(argv[3]);
 
-
+    if(a==0){
+        cout<<"{}";
+        return 0;
+    }
     int inside=(b*b)-4*(a*c);
-
-    if(inside<0 || a==0){
+    if(inside<0){
         cout<<"{}";
 
     }else if(inside==0){
-        cout<<"{"<<-b/2*a<<','<<-b/2*a<<"}";
+        cout<<"{"<<-b/(2*a)<<','<<-b/(2*a)<<"}";
+
     }else{
         double raiz= bsSqrt(b*b-(4*(a*c)));
-
         cout<<'{'<<(-b+raiz)/(2*a)<<','<<(-b-raiz)/(2*a)<<"}";
     }
-
-
     return 0;
 }
 
