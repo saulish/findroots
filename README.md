@@ -19,5 +19,17 @@ de forma gradual, y con su complejidad de O(log(n)), la raíz se consigue de for
 formula general.
 
 
+##Compilacion##
+Se debe de tener cmake 3.27 minimo
+1-. Viajar a la carpeta raiz del proyecto utilizando la terminal
+2-. Crear una carpeta llamada debug (mkdir debug)
+3-. Entrar a la carpeta (cd debug)
+4-. Generar los archivos de compilacion con cmake (cmake ..)
+5-. Una vez terminado, compilar el proyecto (cmake --build .)
+6-. Dentro de debug, se habrá creado otra carpeta, ingresar a ella (cd debug)
+
+Una vez aquí, ya es posible usarlo con ./findroots.exe a b c
+
+
 Incluir archivo README.md que explique concisamente que hace y cómo funciona el algoritmo implementado, e instrucciones para compilar exitosamente el código.
 
