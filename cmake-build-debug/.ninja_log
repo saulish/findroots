@@ -1,0 +1,16 @@
+# ninja log v5
+2	611	7506533166235781	CMakeFiles/findroots.dir/main.cpp.obj	ef5392979f73247
+612	1219	7506533172201629	findroots.exe	d9e4bdaadc7d01d8
+2	862	7506536129061850	build.ninja	c157ffa5040680e6
+3	726	7506575589176159	CMakeFiles/findroots.dir/main.cpp.obj	ef5392979f73247
+727	1351	7506575595330844	findroots.exe	d9e4bdaadc7d01d8
+3	516	7506576125499314	CMakeFiles/findroots.dir/main.cpp.obj	ef5392979f73247
+516	1345	7506576133698822	findroots.exe	d9e4bdaadc7d01d8
+2	697	7506577215531598	CMakeFiles/findroots.dir/main.cpp.obj	ef5392979f73247
+697	1173	7506577220196742	findroots.exe	d9e4bdaadc7d01d8
+2	494	7506577313941452	CMakeFiles/findroots.dir/main.cpp.obj	ef5392979f73247
+494	1086	7506577319763966	findroots.exe	d9e4bdaadc7d01d8
+3	467	7506577431714491	CMakeFiles/findroots.dir/main.cpp.obj	ef5392979f73247
+468	995	7506577436876744	findroots.exe	d9e4bdaadc7d01d8
+2	472	7506577576689427	CMakeFiles/findroots.dir/main.cpp.obj	ef5392979f73247
+473	907	7506577580895999	findroots.exe	d9e4bdaadc7d01d8
