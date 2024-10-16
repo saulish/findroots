@@ -1,40 +1,53 @@
-##findroots##
-Este algoritmo consiste en la obtencion de las raizes reales de un polinomio con la forma ax2 + b x + c, en caso de que este no cuente con 
-raices reales, se imprimirá {}
+# FindRoots
 
-#Funcionamiento#
-El funcionamiento de este algoritmo toma como base la formula general, con lo que el mismo se separa en 3 partes
-#1-. Obtencion de datos#
-Se reciben los datos a, b y c del polinomio 
+Este programa calcula las **raíces reales** de un polinomio cuadrático de la forma **ax^2 + bx + c**. Si no existen raíces reales, el programa imprimirá **{}**.
 
-#2-. Validaciones#
-Se valida que a no sea 0 o que el valor de la raíz sea mayor a 0, de ser el caso entra en el if y pasa al final y para finalizar en caso 
-que sea 0 se realiza la operacion sin la raíz
+## Funcionamiento
 
-#3-. Caso de raíz real
-De pasar las validaciones, significa que el polinomio tiene raices reales, por lo que haciendo uso de una busqueda binaria, buscaremos el valor 
-aproximado de la raiz en un rango de 0 a n, siendo n la raíz, el funcionamiento de la busqueda binara es interesante ya que utilizando un valor tolerancia de 0.1x10-6 
-puedo buscar 2 numeros, l y r que promediados será justo la raíz, esto funciona debido a que uso la capacidad de la busqueda binaria para abarcar un rango e ir disminuyendolo
-de forma gradual, y con su complejidad de O(log(n)), la raíz se consigue de forma eficiente y con una baja diferencia. Con el valor de la raíz, se realiza el resto de la 
-formula general.
+El algoritmo se basa en la **fórmula general** de las raíces cuadráticas y se organiza en los siguientes pasos
 
+1. Entrada de datos
+Se reciben los valores de los coeficientes **a**, **b** y **c** del polinomio desde la línea de comandos.
 
-##Compilacion##
-#Requerimentos#
-1-. Un compilador de C/C++ como MinGW o Microsoft visual studio y verificar que se encuentre en las variables del entorno
-2-. Cmake 3.27 minimo
+2. Validaciones
+- Si **a** es igual a 0, el polinomio no es cuadrático, por lo que el programa imprime **{}**.
+- Si el discriminante **(b^2 - 4ac)** es negativo, quiere decir que no hay raíces reales, y se imprime **{}**.
+- Si el discriminante es igual a 0, hay una única raíz real (doble), y se calcula utilizando la fórmula **-b / (2a)**.
 
-#Pasos de la instalacion#
-1-. Viajar a la carpeta raiz del proyecto utilizando la terminal
-2-. Crear una carpeta llamada debug (mkdir debug)
-3-. Entrar a la carpeta (cd debug)
-4-. Generar los archivos de compilacion con cmake (cmake ..)
-4.1-. En caso de que cmake no detecte el compilador de MinGW puede usarse "cmake -G "MinGW Makefiles" -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++ .."
-5-. Una vez terminado, compilar el proyecto (cmake --build .)
+3. Cálculo de las raíces reales
+Si el discriminante es positivo, se calculan las dos raíces reales utilizando la fórmula general. Para obtener la raíz cuadrada del discriminante, se utiliza una búsqueda binaria, con una tolerancia de **1e-6**, lo que garantiza precisión en el cálculo. La búsqueda binaria tiene una complejidad de **O(log n)**, lo que la hace eficiente para encontrar el valor aproximado de la raíz.
 
-Dependiendo del compilador, el archivo final findroots.exe puede estar en debug o dentro de una segunda carpeta "Debug".
+## Compilación
 
+### Requisitos
+1. Un compilador de C/C++ (como **MinGW** o **Microsoft Visual Studio**) correctamente configurado en las variables del entorno.
+2. **CMake 3.27** o superior.
 
-
-
-
+## Pasos para la compilación
+1. Abre una terminal y navega a la carpeta raíz del proyecto.
+2. Crea una carpeta llamada **build**:
+```
+mkdir build
+```
+3. Entra a la carpeta
+```
+cd build
+```
+4-. Genera los archivos usando CMake
+```
+cmake ..
+```
+En caso de que CMake no detecte el compilador de MinGW puedes utilizar
+```
+cmake -G "MinGW Makefiles" -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++ ..
+```
+5-. Una vez generados los archivos, compila el proyecto
+```
+cmake --build .
+```
+## Ejecucion
+Dependiendo el compilador, el archivo **findroots.exe** puede encontrarse en la carpeta **debug** creada al principio o en la subcarpeta **Debug**. 
+Y se usa de la siguiente forma
+```
+findroots.exe a b c
+```
