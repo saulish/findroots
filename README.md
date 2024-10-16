@@ -20,16 +20,21 @@ formula general.
 
 
 ##Compilacion##
-Se debe de tener cmake 3.27 minimo
+#Requerimentos#
+1-. Un compilador de C/C++ como MinGW o Microsoft visual studio y verificar que se encuentre en las variables del entorno
+2-. Cmake 3.27 minimo
+
+#Pasos de la instalacion#
 1-. Viajar a la carpeta raiz del proyecto utilizando la terminal
 2-. Crear una carpeta llamada debug (mkdir debug)
 3-. Entrar a la carpeta (cd debug)
 4-. Generar los archivos de compilacion con cmake (cmake ..)
+4.1-. En caso de que cmake no detecte el compilador de MinGW puede usarse "cmake -G "MinGW Makefiles" -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++ .."
 5-. Una vez terminado, compilar el proyecto (cmake --build .)
-6-. Dentro de debug, se habrá creado otra carpeta, ingresar a ella (cd debug)
 
-Una vez aquí, ya es posible usarlo con ./findroots.exe a b c
+Dependiendo del compilador, el archivo final findroots.exe puede estar en debug o dentro de una segunda carpeta "Debug".
 
 
-Incluir archivo README.md que explique concisamente que hace y cómo funciona el algoritmo implementado, e instrucciones para compilar exitosamente el código.
+
+
 
