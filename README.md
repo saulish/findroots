@@ -33,7 +33,7 @@ mkdir build
 ```
 cd build
 ```
-4-. Genera los archivos usando CMake
+4. Genera los archivos usando CMake
 ```
 cmake ..
 ```
@@ -42,7 +42,7 @@ En caso de que CMake no detecte el compilador de MinGW puedes utilizar
 ```
 cmake -G "MinGW Makefiles" -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++ ..
 ```
-5-. Una vez generados los archivos, compila el proyecto
+5. Una vez generados los archivos, compila el proyecto
 ```
 cmake --build .
 ```
