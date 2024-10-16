@@ -37,6 +37,7 @@ cd build
 ```
 cmake ..
 ```
+**NOTA**
 En caso de que CMake no detecte el compilador de MinGW puedes utilizar
 ```
 cmake -G "MinGW Makefiles" -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++ ..
@@ -46,7 +47,8 @@ cmake -G "MinGW Makefiles" -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++ ..
 cmake --build .
 ```
 ## Ejecucion
-Dependiendo el compilador, el archivo **findroots.exe** puede encontrarse en la carpeta **debug** creada al principio o en la subcarpeta **Debug**. 
+Dependiendo el compilador, el archivo **findroots.exe** puede encontrarse en la carpeta **build** creada al principio o en la subcarpeta **Debug**. 
+Esto sucede ya que al compilarlo con **Microsoft Visual Studio** este creó una subcarpeta **Debug** mientras que al compilarlo con **MinGW** este dejo el archivo en build.
 Y se usa de la siguiente forma
 ```
 findroots.exe a b c
