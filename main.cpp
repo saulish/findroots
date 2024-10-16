@@ -21,22 +21,22 @@ double bsSqrt(double n) {
 
 int main(int argc, char* argv[]) {
     if (argc != 4) {
-        cout << "{}" << endl;
+        cout << "{}";
         return 1;
     }
-    int a = atoi(argv[1]);
-    int b = atoi(argv[2]);
-    int c = atoi(argv[3]);
+    double a = atof(argv[1]);
+    double b = atof(argv[2]);
+    double c = atof(argv[3]);
 
     if(a==0){
         cout<<"{}";
         return 0;
     }
-    int inside=(b*b)-4*(a*c);
-    if(inside<0){
+    double disc=(b*b)-4*(a*c);
+    if(disc<0){
         cout<<"{}";
 
-    }else if(inside==0){
+    }else if(disc==0){
         cout<<"{"<<-b/(2*a)<<','<<-b/(2*a)<<"}";
 
     }else{
