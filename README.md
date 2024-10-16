@@ -37,7 +37,7 @@ cd build
 ```
 cmake ..
 ```
-**NOTA**
+**NOTA**:<br>
 En caso de que CMake no detecte el compilador de MinGW puedes utilizar
 ```
 cmake -G "MinGW Makefiles" -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++ ..
